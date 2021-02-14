@@ -4,6 +4,8 @@ using API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+using API.Helpers;
 
 namespace API.Extensions
 {
@@ -14,6 +16,9 @@ namespace API.Extensions
         {
             //most apropiate for http request
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             
             services.AddDbContext<DataContext>(options =>
             {
