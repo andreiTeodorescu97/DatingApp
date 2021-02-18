@@ -1,6 +1,7 @@
 export interface User{
     username: string;
     token: string;
+    photoUrl: string;
 }
 
 //ts infers type of data (number here)
