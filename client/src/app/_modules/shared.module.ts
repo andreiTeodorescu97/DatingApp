@@ -8,9 +8,12 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { defineLocale } from "ngx-bootstrap/chronos";
 import { roLocale } from "ngx-bootstrap/locale";
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimeagoModule } from 'ngx-timeago';
 defineLocale("ro", roLocale);
 
-
+//ANGULAR BOOTSTRAP COMPONENTS NEED FOR
 @NgModule({
   declarations: [],
   imports: [
@@ -23,6 +26,9 @@ defineLocale("ro", roLocale);
     NgxGalleryModule,
     FileUploadModule,
     BsDatepickerModule.forRoot(), 
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
+    TimeagoModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
@@ -31,6 +37,9 @@ defineLocale("ro", roLocale);
     NgxGalleryModule,
     FileUploadModule,
     BsDatepickerModule,
+    PaginationModule,
+    ButtonsModule,
+    TimeagoModule
   ]
 })
 export class SharedModule { }

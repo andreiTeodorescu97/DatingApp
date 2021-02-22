@@ -21,7 +21,7 @@
     <div class="btn-group" *ngIf='(accountService.currentUser$ | async) as user' dropdown>
       <img src="{{user.photoUrl|| './assets/user.png'}} " alt="{{user.username}}">
       <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-        aria-controls="dropdown-animated">Welcome {{user.username | titlecase}}<span class="caret"></span>
+        aria-controls="dropdown-animated">Welcome {{user.knownAs | titlecase}}<span class="caret"></span>
       </button>
       <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated">
         <li role="menuitem">
