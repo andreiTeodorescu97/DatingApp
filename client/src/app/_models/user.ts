@@ -4,6 +4,7 @@ export interface User{
     photoUrl: string;
     knownAs: string;
     gender : string;
+    roles: string[];
 }
 
 //ts infers type of data (number here)

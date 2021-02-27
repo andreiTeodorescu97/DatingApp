@@ -11,6 +11,7 @@ import { roLocale } from "ngx-bootstrap/locale";
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TimeagoModule } from 'ngx-timeago';
+import { ModalModule } from 'ngx-bootstrap/modal';
 defineLocale("ro", roLocale);
 
 //ANGULAR BOOTSTRAP COMPONENTS NEED FOR
@@ -28,7 +29,8 @@ defineLocale("ro", roLocale);
     BsDatepickerModule.forRoot(), 
     PaginationModule.forRoot(),
     ButtonsModule.forRoot(),
-    TimeagoModule.forRoot()
+    TimeagoModule.forRoot(),
+    ModalModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
@@ -39,7 +41,8 @@ defineLocale("ro", roLocale);
     BsDatepickerModule,
     PaginationModule,
     ButtonsModule,
-    TimeagoModule
+    TimeagoModule,
+    ModalModule
   ]
 })
 export class SharedModule { }
