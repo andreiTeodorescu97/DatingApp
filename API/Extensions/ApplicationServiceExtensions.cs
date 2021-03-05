@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using API.Helpers;
+using API.SignlaR;
 
 namespace API.Extensions
 {
@@ -15,6 +16,7 @@ namespace API.Extensions
         IConfiguration config)
         {
             //most apropiate for http request
+            services.AddSingleton<PresenceTracker>();
             services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IPhotoService, PhotoService>();
