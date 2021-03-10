@@ -38,8 +38,6 @@ namespace API.Helpers
                 options => options.MapFrom(source => source.Recipient.Photos
                 .FirstOrDefault(x => x.IsMain == true).Url)
             );
-
-            CreateMap<DateTime, DateTime>().ConvertUsing(d => DateTime.SpecifyKind(d, DateTimeKind.Utc));
         }
     }
 }
