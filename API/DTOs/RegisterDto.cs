@@ -18,7 +18,7 @@ namespace API.DTOs
         [Required]
         public string Country { get; set; }
         [Required]
-        [StringLength(8, MinimumLength = 4)]
+        [StringLength(15, MinimumLength = 6)]
         public string Password { get; set; }
 
     }
