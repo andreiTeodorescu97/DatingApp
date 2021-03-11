@@ -55,15 +55,19 @@ namespace API
                 .WithOrigins("https://localhost:4200"));
 
             app.UseAuthentication();
-
             app.UseAuthorization();
             
+            //For deployment
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<PresenceHub>("hubs/presence");
                 endpoints.MapHub<MessageHub>("hubs/message");
+                //For deployment
+                endpoints.MapFallbackToController("Index", "Fallback");
             });
         }
     }
