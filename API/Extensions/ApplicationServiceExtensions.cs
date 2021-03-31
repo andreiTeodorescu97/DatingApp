@@ -62,7 +62,14 @@ namespace API.Extensions
 
                 // Whether the connection string came from the local development configuration file
                 // or from the environment variable from Heroku, use it to set up your DbContext.
-                options.UseNpgsql(connStr);
+                if (env == "Development")
+                {
+                    options.UseSqlite(config.GetConnectionString("DefaultConnection"));
+                }
+                else
+                {
+                    options.UseNpgsql(connStr);
+                }
 
             });
 
