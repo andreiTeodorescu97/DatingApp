@@ -1,0 +1,18 @@
+Install following extensions:
+C# Omnisharp
+C# Extensions
+
+Install node v16
+Install angular dev kit
+Install pgAdmin
+
+How to run app locally:
+npm start and dotnet run
+OR: (use front-end build)
+ng build + dotnet run
+ng build --prod + dotnet run
+
+Docker
+docker run --name postgres -e POSTGRES_PASSWORD=atletism13 -p 5432:5432 -d postgres:latest
+docker build -t andrei997teo/datingapp .
+docker run --rm -it -p 8080:80 andrei997teo/datingapp:latest

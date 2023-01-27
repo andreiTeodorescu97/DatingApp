@@ -56,7 +56,6 @@ namespace API
 
             app.UseAuthentication();
             app.UseAuthorization();
-            
             //For deployment
             app.UseDefaultFiles();
             app.UseStaticFiles();
