@@ -24,7 +24,7 @@ jobs:
         with:
           context: "{{defaultContext}}:API"
           push: true
-          tags: andrei997teo/datingapp:production
+          tags: andrei997teo/datingapp:latest
   deploy:
     needs: docker
     name: Deploy app
