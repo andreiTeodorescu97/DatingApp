@@ -26,7 +26,7 @@ fly secrets set TokenKey=FWdW3TysVuvQdcMqQUIFCqnw3NNPSe2hwZ6Q669CQFA
 fly apps destroy dating-app-bucharest-db
 fly deploy
 
-Steps to deploy:
+Steps to deploy (manually):
 Prepare fe build: ng build --prod
 Prepare docker image and run docker container locally to see if everything works
 Prepare fly.io app
@@ -34,5 +34,10 @@ Add env variables to fly.io config
 Add fly.io secrets
 Launch application
 
+Steps to deploy (automatically):
+Prepare fe build: ng build --prod
+Prepare docker image and run docker container locally to see if everything works
+Push docker image manually
+Push master and the deployment to fly.io will happen automatically using GitHub Actions
 
 https://github.com/docker/build-push-action
