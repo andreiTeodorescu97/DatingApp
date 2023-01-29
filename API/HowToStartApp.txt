@@ -28,7 +28,7 @@ fly deploy
 
 Steps to deploy (manually):
 Prepare fe build: ng build --prod
-Prepare docker image and run docker container locally to see if everything works
+Prepare docker image (build) and run docker container locally to see if everything works
 Prepare fly.io app
 Add env variables to fly.io config
 Add fly.io secrets
