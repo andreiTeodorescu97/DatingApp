@@ -18,6 +18,7 @@ namespace API
     {
         public static async Task Main(string[] args)
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             //this runs before au DI middleware
             var host = CreateHostBuilder(args).Build();
 
