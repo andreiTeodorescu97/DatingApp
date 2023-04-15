@@ -12,11 +12,15 @@ OR: (use front-end build)
 ng build + dotnet run
 ng build --prod + dotnet run
 
-Docker
+Docker 
+--Creare container baza de date
 docker run --name postgres -e POSTGRES_PASSWORD=atletism13 -p 5432:5432 -d postgres:latest
 docker build -t andrei997teo/datingapp .
 docker run --rm -it -p 8080:80 andrei997teo/datingapp:latest
 docker push andrei997teo/datingapp:latest
+
+Docker local:
+docker run -e  ASPNETCORE_ENVIRONMENT=DevelopmentDocker --rm -it -p 8080:80 andrei997teo/datingapp:latest
 
 Fly.io
 fly

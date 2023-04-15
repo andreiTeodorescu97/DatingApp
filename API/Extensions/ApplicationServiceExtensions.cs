@@ -34,7 +34,7 @@ namespace API.Extensions
 
                 // Depending on if in development or production, use either Fly.io-provided
                 // connection string, or development connection string from env var.
-                if (env == "Development")
+                if (env == "Development" || env == "DevelopmentDocker")
                 {
                     connStr = config.GetConnectionString("DefaultConnection");
                 }
