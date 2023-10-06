@@ -9,5 +9,5 @@ o Microsoft Identity authentication <br />
 o Photos upload in Cloudinary (a cloud storage for photos) <br />
 o Live messaging system for registered users made with SignalR library <br />
 o Deployment in Heroku (because it was free) <br />
-o You can access the app here: https://datingappandrei.herokuapp.com/ <br />
+o You can access the app here: https://dating-app-bucharest.fly.dev// <br />
  
